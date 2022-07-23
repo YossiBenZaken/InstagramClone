@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct SearchView: View {
+    @State var text: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 0.0) {
+            SearchInput(text: text)
+                .padding(.horizontal, 16)
+            ScrollView(.vertical, showsIndicators: false) {
+                Grid()
+            }
+            .padding(.top)
+        }
     }
 }
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView()
+        SearchView(text: "")
     }
 }

@@ -15,7 +15,7 @@ struct TabBar: View {
                     .tabItem {
                         Image("home")
                     }
-                SearchView()
+                SearchView(text: "")
                     .tabItem {
                         Image("search")
                     }
