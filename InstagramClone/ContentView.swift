@@ -12,6 +12,17 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 0.0){
             Header()
+            
+            Stories()
+            
+            Divider()
+            
+            VStack(spacing: 0.0) {
+                PostHeader()
+                PostContent()
+                
+            }
+            
             Spacer()
         }
     }
@@ -23,18 +34,4 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct Header: View {
-    var body: some View {
-        HStack {
-            Image("logo")
-            Spacer()
-            HStack(spacing: 20) {
-                Image("add")
-                Image("heart")
-                Image("messenger")
-            }
-        }
-        .padding(.horizontal, 15)
-        .padding(.vertical, 3)
-    }
-}
+
