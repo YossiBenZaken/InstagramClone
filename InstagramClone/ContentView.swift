@@ -9,19 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(spacing: 0.0){
-            Header()
-            ScrollView(.vertical, showsIndicators: false) {
-                Stories()
-                
-                Divider()
-                
-                Post()
-                
-                Post(image: "dog", description: "Almost 2 years old, I love her.")
-            }
-
-        }
+        TabBar()
     }
 }
 
@@ -30,6 +18,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
-
-
