@@ -8,22 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     var body: some View {
         VStack(spacing: 0.0){
             Header()
-            
-            Stories()
-            
-            Divider()
-            
-            VStack(spacing: 0.0) {
-                PostHeader()
-                PostContent()
+            ScrollView(.vertical, showsIndicators: false) {
+                Stories()
                 
+                Divider()
+                
+                Post()
+                
+                Post(image: "dog", description: "Almost 2 years old, I love her.")
             }
-            
-            Spacer()
+
         }
     }
 }
@@ -33,5 +30,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
 
 
